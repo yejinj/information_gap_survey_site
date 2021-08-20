@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Digital Presence Test </title>
+    <script src="./main.js"></script>
+    <link rel="stylesheet" href="./main.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+    </style>
+</head>
+<body>
+    <!-- 시작 -->
+    <div id="start">
+        <div class="title">
+            디지털 정보 <font class="title_font"><b> 실태,</b></font><br>
+            <font class="title_font"><b>어디까지</b></font> 알고 계세요?<br>
+            <img src="./image/website.png" id="website">
+            
+        </div>
+
+        <div class="start">
+            <button id="start_btn" onclick="event0()">
+                테스트하기
+            <img src="./image/cursor.png" alt="cursor" id="cursor">
+            </button>
+        </div>
+
+        <div class="start_2">
+            png from , thanks to FLATICON<br>
+            이 사이트는 상업용이 아닌 학습 목적으로 만들어진 사이트입니다.<br>
+            This site is intended for educational purposes and not for commercial use.
+        </div>
+    </div>
+
+    <div class="question_first" style="display:none" id="question_1">
+        75세 이상의 스마트폰 사용률은<br> <b>40%</b> 미만이다. <br>
+        <button class="question_btn_first" onclick="event1()"> Yes </button><br>
+        <button class="question_btn_first" onclick="event2()"> No </button>
+    </div>
+
+    <div class="question" style="display: none;" id="question_2">
+        65세 이상 어르신들 중 
+        컴퓨터의 파일을 <b>드래그 앤 드랍</b>할 수 있는 분들은 <br>
+        <b>10%</b> 이하이다. <br>
+        <img src="./image/drag-and-drop.png" alt="drag&drop" class="img"><br>
+        <button class="question_btn" onclick="event3()"> Yes </button><br>
+        <button class="question_btn" onclick="event4()"> No </button>
+    </div>
+
+    <div class="question" style="display: none;" id="question_3">
+        혼자 거주하시는 어르신들 중 문자를 사용할 수 있는 어르신은
+        <b>50%</b> 이하이다. <br>
+        <img src="./image/text.png" alt="text" class="img"><br>
+        <button class="question_btn" onclick="event5()"> Yes </button><br>
+        <button class="question_btn" onclick="event6()"> No </button>
+    </div>
+
+    <div class="question" style="display:none" id="question_4">
+        우리나라 성인들의 스마트폰 사용률은 <br> 5년동안 <b>40%</b> 이상 증가했다.
+        <img src="./image/smartphone.png" alt="smartphone" class="img"><br>
+        <button class="question_btn" onclick="event7()"> Yes </button><br>
+        <button class="question_btn" onclick="event8()"> No </button>
+    </div>
+
+    <div class="question" style="display:none" id="question_5">
+        스마트폰으로 나이를 입력하면 받을 수 있는 복지 혜택을 확인할 수 있는 <b>복지 서비스</b>의 이름은?
+        <img src="./image/couple.png" alt="couple" class="img"><br>
+        <button class="question_btn" onclick="event9()"> 복지로 </button><br>
+        <button class="question_btn" onclick="event10()"> 복지넷 </button>
+    </div>
+
+    <div class="question" style="display:none" id="question_6">
+        노인 돌봄 개발 업체, 전자동 변기, 몸이 불편한 노인을 돕는 장치처럼
+        <b>나이가 많은 사람을 위한 기술</b>을 통칭하는 말은? <br>
+        <img src="./image/tech.png" alt="tech" class="img"><br>
+        <button class="question_btn" onclick="event11()"> 에이징 커브 </button><br>
+        <button class="question_btn" onclick="event12()"> 에이징 테크 </button>
+    </div>
+
+    <!-- 1 -->
+    <div class="question" style="display:none" id="question_7">
+        주민센터에서 모바일 <b>기차 예매법</b>, <b>키오스크</b> 메뉴를 주문법 등을 교육하는 정책의 이름은?<br>
+        <img src="./image/insurance.png" alt="insurance" class="img"><br>
+        <button class="question_btn_2" onclick="event13()"> 디지털 포용 정책 </button><br>
+        <button class="question_btn_2" onclick="event14()"> 디지털 포섭 정책 </button><br>
+        <button class="question_btn_2" onclick="event15()"> 디지털 활용 정책 </button>
+    </div>
+
+    <!-- 1 -->
+    <div class="question" style="display: none;" id="question_8">
+        스마트폰을 과도하게 사용해서 <b>스마트폰 중독</b>에 걸린 청소년의 비율은?
+        <img src="./image/kids.png" alt="kids" class="img"><br>
+        <button class="question_btn_2" onclick="event16()"> 30-40명 </button><br>
+        <button class="question_btn_2" onclick="event17()"> 40-50명 </button><br>
+        <button class="question_btn_2" onclick="event18()"> 50-60명 </button>
+    </div>
+
+    <!-- 결과 -->
+    <div id="result_checking" style="display: none;">
+        <br> 나는 얼마나 잘 알고 있을까? <br>
+        <img src="./image/understanding.png" alt="understanding" class="img">
+        <button class="question_btn" onclick="show_result()"> 확인하러 가기 </button>
+    </div>
+
+    <div class="result" style="display: none;" id="result_1">
+        당신의 점수는 ? <br>
+        <font class="result_1">
+            <b>0점</b><br>
+            아쉽네요 😓 
+        </font>
+
+        <img src="./image/score.png" alt="score" class="img_result"><br>
+
+        <div class="result_3">
+            조금 아쉬운 점수네요!<br>
+            전자 기기를 사용하면서 얻는 편리함과 동시에,
+            디지털 소외 계층이 겪을 불편함에 대해 생각해보는 시간을 가져보도록 해요!
+        </div>
+
+        <button class="result_btn" onclick="window.location.reload()"> 테스트 다시하기 </button>
+    </div>
+
+    <div class="result" style="display: none;" id="result_2">
+        당신의 점수는 ? <br>
+        <font class="result_1">
+            <b>13점</b><br> 
+            조금씩 알아가봐요 😓
+        </font>
+
+        <img src="./image/score.png" alt="score" class="img_result"><br>
+
+        <div class="result_3">
+            조금 아쉬운 점수네요!<br>
+            전자 기기를 사용하면서 얻는 편리함과 동시에,
+            디지털 소외 계층이 겪을 불편함에 대해 생각해보는 시간을 가져보도록 해요!
+        </div>
+
+        <button class="result_btn" onclick="window.location.reload()"> 테스트 다시하기 </button>
+    </div>
+
+    <div class="result" style="display: none;" id="result_3">
+        당신의 점수는 ? <br>
+        <font class="result_1">
+            <b>26점</b><br> 
+            조금 더 공부해봐요 😬
+        </font>
+
+        <img src="./image/score.png" alt="score" class="img_result"><br>
+
+        <div class="result_3">
+            조금 아쉬운 점수네요!<br>
+            전자 기기를 사용하면서 얻는 편리함과 동시에,
+            디지털 소외 계층이 겪을 불편함에 대해 생각해보는 시간을 가져보도록 해요!
+        </div>
+
+        <button class="result_btn" onclick="window.location.reload()"> 테스트 다시하기 </button>
+    </div>
+
+    <div class="result" style="display: none;" id="result_4">
+        당신의 점수는 ? <br>
+        <font class="result_1">
+            <b>38점</b><br> 
+            조금만 더 관심을 가져봅시다 ! 🤓
+        </font>
+
+        <img src="./image/score.png" alt="score" class="img_result"><br>
+
+        <div class="result_3">
+            조금 아쉬운 점수네요!<br>
+            전자 기기를 사용하면서 얻는 편리함과 동시에,
+            디지털 소외 계층이 겪을 불편함에 대해 생각해보는 시간을 가져보도록 해요!
+        </div>
+
+        <button class="result_btn" onclick="window.location.reload()"> 테스트 다시하기 </button>
+    </div>
+
+    <div class="result" style="display: none;" id="result_5">
+        당신의 점수는 ? <br>
+        <font class="result_1">
+            <b>50점</b><br>
+            노력하면 더 잘할 수 있어요! 💪 
+        </font>
+
+        <img src="./image/score.png" alt="score" class="img_result"><br>
+
+        <div class="result_3">
+            기본적인 지식이 탄탄하시네요 <br>
+            전자 기기를 사용하면서 얻는 편리함과 동시에,
+            디지털 소외 계층이 겪을 불편함에 대해 생각해보는 시간을 가져보도록 해요!
+        </div>
+
+        <button class="result_btn" onclick="window.location.reload()"> 테스트 다시하기 </button>
+    </div>
+
+    <div class="result" style="display: none;" id="result_6">
+        당신의 점수는 ? <br>
+        <font class="result_1">
+            <b>62점</b><br>
+            이 분야에 관심이 있으시네요 😮
+        </font>
+
+        <img src="./image/score.png" alt="score" class="img_result"><br>
+
+        <div class="result_3">
+            기본적인 지식이 탄탄하시네요 <br>
+            앞으로도 전자 기기를 사용하면서 얻는 편리함과 동시에,
+            디지털 소외 계층이 겪을 불편함에 대해 생각해보는 시간을 가져보도록 해요!
+        </div>
+
+        <button class="result_btn" onclick="window.location.reload()"> 테스트 다시하기 </button>
+    </div>
+
+    <div class="result" style="display: none;" id="result_7">
+        당신의 점수는 ? <br>
+        <font class="result_1">
+            <b>75점</b><br>
+            이 분야에 관심이 많으시네요 😮
+        </font>
+
+        <img src="./image/score.png" alt="score" class="img_result"><br>
+
+        <div class="result_3">
+            기본적인 지식이 탄탄하시네요 <br>
+            앞으로도 전자 기기를 사용하면서 얻는 편리함과 동시에,
+            디지털 소외 계층이 겪을 불편함에 대해 생각해보는 시간을 가져보도록 해요!
+        </div>
+
+        <button class="result_btn" onclick="window.location.reload()"> 테스트 다시하기 </button>
+    </div>
+
+    <div class="result" style="display: none;" id="result_8">
+        당신의 점수는 ? <br>
+        <font class="result_1">
+            <b>87점</b><br>
+            관련 소식을 빠르게 접하셨군요! 😍
+        </font>
+
+        <img src="./image/score.png" alt="score" class="img_result"><br>
+
+        <div class="result_3">
+            기본적인 지식이 탄탄하시네요 <br>
+            앞으로도 전자 기기를 사용하면서 얻는 편리함과 동시에,
+            디지털 소외 계층이 겪을 불편함에 대해 생각해보는 시간을 가져보도록 해요!
+        </div>
+
+        <button class="result_btn" onclick="window.location.reload()"> 테스트 다시하기 </button>
+    </div>
+
+    <div class="result" style="display: none;" id="result_9">
+        당신의 점수는 ? <br>
+        <font class="result_1">
+            <b>100점</b><br>
+            와우 혹시 전공자이신가요? 🥳💗
+        </font>
+
+        <img src="./image/score.png" alt="score" class="img_result"><br>
+
+        <div class="result_3">
+            대단합니다. 완벽한 지식을 갖고 계시는군요. <br>
+            앞으로도 지금처럼 디지털 소외 계층에 대해 생각해보는 시간을 가져봐요!
+        </div>
+
+        <button class="result_btn" onclick="window.location.reload()"> 테스트 다시하기 </button>
+    </div>
+</body>
+</html>
