@@ -1,7 +1,14 @@
-#### Information gap survey site 정보 격차 실태 조사 사이트
-https://zen-poitras-49c0ed.netlify.app/
-빠른 정보화 속 소외계층에 대한 관심을 이끌어내고자 제작된 사이트
+### Information gap survey site Information gap survey site
+<br>
+site add<br>
+https://zen-poitras-49c0ed.netlify.app/<br>
+<br><br>
+Produced to draw attention to the underprivileged in the rapid informatization <br>
+- 빠른 정보화 속 소외계층에 대한 관심을 이끌어내고자 제작<br>
+- Pay attention to social institutions, problems, and interests<br>
 
-<주요 기능>
-1. 8개의 질문, 한 질문 당 13점으로 이루어진 질문지
-2. 사용자가 선택한 정답에 따라 다른 9개의 결과가 등장
+<br><br>
+Main func. <br>
+1. 8 questions, 13 points per question<br>
+2. 9 different results appear depending on the correct answer chosen by the user<br>
+3. Use of on-click events for division appearance and disappearance<br>
